@@ -1,0 +1,6 @@
+<div>
+    <app-add-item (addItemEvent)="addItem($event)"></app-add-item>
+    <ul *ngFor="let item of items; index as i">
+        <li [ngClass]="clicked[i] ? 'strike' : ''" (click)="strike(i)">{{item}}</li>
+    </ul>
+</div>
